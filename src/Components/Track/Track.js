@@ -8,7 +8,7 @@ class Track extends React.Component {
     this.addTrack = this.addTrack.bind(this);
     this.removeTrack = this.removeTrack.bind(this);
   }
-  renderAction(isRemoval) {
+  renderAction() {
     if(this.props.isRemoval){
       return '-';
     } else {
@@ -29,12 +29,21 @@ class Track extends React.Component {
   }
   render() {
     return (
+      <div>
       <div className="Track">
         <div className="Track-information">
           <h3>{this.props.track.name}</h3>
           <p>{this.props.track.artist} | {this.props.track.album}</p>
         </div>
         {this.trackAction()}
+      </div>
+      <div>
+        <audio controls>
+          <source src={this.props.track.previewUrl} type="audio/ogg"/>
+          <source src={this.props.track.previewUrl} type="audio/mpeg"/>
+        Your browser does not support the audio element.
+        </audio>
+      </div>
       </div>
     );
   }

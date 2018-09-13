@@ -64,7 +64,6 @@ class App extends React.Component {
         searchResults: results
       })
     })
-
   }
 
   render() {

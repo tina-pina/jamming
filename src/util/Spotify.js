@@ -1,6 +1,6 @@
 let accessToken = '';
-const CLIENT_ID = 'c4cd441214524d4d9a00c286a818adc6';
-const REDIRECT_URI = 'https://christina_test.surge.sh' // 'http://localhost:3000/';
+const CLIENT_ID = '73a484eb2a0445e3bddab2b666351450';
+const REDIRECT_URI = 'https://christina_test.surge.sh';
 
 let Spotify = {
 
@@ -75,7 +75,8 @@ let Spotify = {
                 name: trackItem.name,
                 artist: trackItem.artists[0].name,
                 album: trackItem.album.name,
-                uri: trackItem.uri
+                uri: trackItem.uri,
+                previewUrl: trackItem.preview_url
               }
             }
           )
